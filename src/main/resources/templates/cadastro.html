@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+        <head>
+            <meta charset="UTF-8">
+
+            <link rel="stylesheet" th:href="@{/cadastro.css}">
+
+        </head>
+        <body>
+            <div class="container">
+                <div class="centralizado">
+                    <h1>Cadastro de Usuário</h1>
+                </div>
+                <form action="#" th:action="@{/cadastro}" th:object="${usuario}" method="post">
+                    <div class="input-group">
+                        <p>Nome: <input type="text" th:field="*{nome}" /></p>
+                    </div>
+                    <div class="input-group">
+                        <p>Email: <input type="email" th:field="*{email}" /></p>
+                    </div>
+                    <div class="label-combobox-container">
+                        <label for="categoria">Categoria:</label>
+                        <select id="categoria" th:field="*{categoria}">
+                            <option value="">Selecione uma opção</option>
+                            <option value="aluno">Aluno</option>
+                            <option value="professor">Professor</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <p>Senha: <input type="password" th:field="*{senha}" /></p>
+                    </div>
+                    <div class="input-group">
+                        <p><input type="submit" value="Cadastrar" /></p>
+                    </div>
+                    <div id="message-container" th:if="${mensagem} != null">
+                        <img src="/Imagens/ok.png" alt="Mensagem" />
+                        <p th:text="${mensagem}"></p>
+                    </div>
+                    <script>
+                        // Verifique se a div com a mensagem existe
+                        if (document.getElementById('message-container')) {
+                            // A imagem será exibida por 5 segundos (5000 milissegundos)
+                            setTimeout(function() {
+                                // Após 5 segundos, a imagem desaparece
+                                document.getElementById('message-container').style.display = 'none';
+                            }, 5000);
+                        }
+                    </script>
+                </form>
+            </div>
+        </body>
+    </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" th:href="@{/login.css}">
+        </head>
+
+        <body>
+            <div class="container">
+            <div class="centralizado">
+            <h1>Tela de Login</h1>
+            </div>
+                <form action="/login" method="post">
+                    CPF: <input type="text" name="cpf"/><br>
+                    Senha: <input type="password" name="senha"/><br>
+                    <input type="submit" value="Login"/>
+                </form>
+
+                <form action="/cadastro" method="get">
+                    <button type="submit">Cadastrar</button>
+                </form>
+
+            <div th:if="${error != null}">
+                <p th:text="${error}"></p>
+            </div>
+            </div>
+        </body>
+    </html>
