@@ -1,71 +1,64 @@
+/* cadastro.css */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
-    background-color: #A9F5BC;
-}
-
-/*Centralização do titulo na página*/
-.centralizado {
-    text-align: center; /* Centraliza o texto */
-    margin-top: 1%; /* Ajusta a margem superior para centralizar verticalmente, ajuste conforme necessário */
+    padding: 20px;
 }
 
 .container {
-    width: 40%;
-    margin: 50px auto;
+    max-width: 800px;
+    margin: auto;
+    background: white;
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 10px 0px #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form h1 {
+h1 {
     text-align: center;
-    margin-bottom: 20px;
+    color: #333;
 }
 
-.input-group {
-    margin: 50px 0;
-    text-align: center; /* Centraliza o texto */
-}
-
-/*CSS da combobox*/
-.label-combobox-container {
-    align-items: center;
-    text-align: center; /* Centraliza o texto */
-    padding: 5px;
-}
-
-/*CSS do texto da combobox*/
-.label-combobox-container label {
-    margin-right: 10px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-group input[type="text"],
-.input-group input[type="email"],
-.input-group input[type="password"],
-.input-group select {
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 10px;
+fieldset {
     border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-.input-group button {
+legend {
+    padding: 0 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+select {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
     background-color: #5cb85c;
     color: white;
+    padding: 10px 20px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.input-group button:hover {
+input[type="submit"]:hover {
     background-color: #4cae4c;
 }

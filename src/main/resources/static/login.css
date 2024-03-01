@@ -1,71 +1,72 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-color: #A9F5BC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/*Centralização do titulo na página*/
-.centralizado {
-    text-align: center; /* Centraliza o texto */
-    margin-top: 1%; /* Ajusta a margem superior para centralizar verticalmente, ajuste conforme necessário */
+.imagem-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .container {
-    width: 40%;
-    margin: 50px auto;
+    background-color: #ffffff;
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 10px 0px #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
 }
 
-form h1 {
+.centralizado {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.input-group {
-    margin: 50px 0;
-    text-align: center; /* Centraliza o texto */
-}
-
-/*CSS da combobox*/
-.label-combobox-container {
-    align-items: center;
-    text-align: center; /* Centraliza o texto */
-    padding: 5px;
-}
-
-/*CSS do texto da combobox*/
-.label-combobox-container label {
-    margin-right: 10px;
-}
-
-.input-group label {
+.login-form label {
     display: block;
     margin-bottom: 5px;
 }
 
-.input-group input[type="text"],
-.input-group input[type="email"],
-.input-group input[type="password"],
-.input-group select {
-    width: 50%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-}
-
-.input-group button {
+.login-form input[type="text"],
+.login-form input[type="password"] {
     width: 100%;
     padding: 10px;
-    background-color: #5cb85c;
-    color: white;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
     border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
     cursor: pointer;
 }
 
-.input-group button:hover {
-    background-color: #4cae4c;
+.login-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.link-cadastro {
+    text-align: center;
+}
+
+.error-message {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 20px;
 }
